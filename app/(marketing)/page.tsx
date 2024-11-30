@@ -214,7 +214,7 @@ const HighlightsSection = () => {
     <Highlights>
       <HighlightsItem
         colSpan={[1, null, 2]}
-        title="Continuous Code Security Scanners"
+        title="Continuous Code Security Monitoring"
       >
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
