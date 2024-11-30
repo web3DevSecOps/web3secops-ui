@@ -60,8 +60,8 @@ import faq from '#data/faq'
 import testimonials from '#data/testimonials'
 
 export const meta: Metadata = {
-  title: 'Saas UI Landingspage',
-  description: 'Free SaaS landingspage starter kit',
+  title: 'Web3 Security Operation',
+  description: 'Securing Every Layer of Web3, Beyond Just Audits',
 }
 
 const Home: NextPage = () => {
