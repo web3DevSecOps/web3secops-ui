@@ -71,11 +71,11 @@ const Home: NextPage = () => {
 
       <HighlightsSection />
 
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
 
       <TestimonialsSection />
 
-      <PricingSection />
+      {/* <PricingSection /> */}
 
       <FaqSection />
     </Box>
@@ -94,28 +94,29 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Build, Secure, Scale
+                <Br /> Web3 with Confidence
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{' '}
-                build intuitive SaaS products with speed.
+                <Em>Beyond Smart Contract Audits</Em>
+                <Br /> Our security framework integrates with your development{' '}
+                <Br /> and infrastructure to reduces costs while helping you
+                ship faster.
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
+              {/* <HStack pt="4" pb="12" spacing="8">
                 <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
+              </HStack> */}
 
-              <ButtonGroup spacing={4} alignItems="center">
+              <ButtonGroup pt="4" pb="12" spacing="8" alignItems="center">
                 <ButtonLink colorScheme="primary" size="lg" href="/signup">
-                  Sign Up
+                  Book Your FREE Security Consultation
                 </ButtonLink>
-                <ButtonLink
+                {/* <ButtonLink
                   size="lg"
                   href="https://demo.saas-ui.dev"
                   variant="outline"
@@ -133,7 +134,7 @@ const HeroSection: React.FC = () => {
                   }
                 >
                   View demo
-                </ButtonLink>
+                </ButtonLink> */}
               </ButtonGroup>
             </FallInPlace>
           </Hero>
@@ -170,35 +171,34 @@ const HeroSection: React.FC = () => {
         pt="20"
         features={[
           {
-            title: 'Accessible',
+            title: 'Phishing Campaigns',
             icon: FiSmile,
-            description: 'All components strictly follow WAI-ARIA standards.',
+            description: 'With over 40% of funds lost to phishing attacks.',
             iconPosition: 'left',
             delay: 0.6,
           },
           {
-            title: 'Themable',
-            icon: FiSliders,
+            title: 'DevSecOps',
+            icon: FiThumbsUp,
             description:
-              'Fully customize all components to your brand with theme support and style props.',
+              'Integrate security into development to speed up secure delivery.',
             iconPosition: 'left',
-            delay: 0.8,
+            delay: 1.1,
           },
           {
-            title: 'Composable',
+            title: 'Traditional Security Review',
             icon: FiGrid,
-            description:
-              'Compose components to fit your needs and mix them together to create new ones.',
+            description: 'Over 46% of crypto losses stem from Web2 flaws',
             iconPosition: 'left',
             delay: 1,
           },
           {
-            title: 'Productive',
-            icon: FiThumbsUp,
+            title: 'Access Control Review',
+            icon: FiSliders,
             description:
-              'Designed to reduce boilerplate and fully typed, build your product at speed.',
+              'Over $1.3 billion has been lost due to access control vulnerabilities.',
             iconPosition: 'left',
-            delay: 1.1,
+            delay: 0.8,
           },
         ]}
         reveal={FallInPlace}
@@ -212,13 +212,15 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem
+        colSpan={[1, null, 2]}
+        title="Continuous Code Security Scanners"
+      >
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            Stay protected with <Em>real-time security monitoring</Em>. Our
+            automated scanners continuously <Em>analyze your codebase</Em>,
+            providing immediate alerts and recommendations.
           </Text>
 
           <Flex
@@ -234,10 +236,10 @@ const HighlightsSection = () => {
           >
             <Box>
               <Text color="yellow.400" display="inline">
-                yarn add
+                Security is a process,
               </Text>{' '}
               <Text color="cyan.300" display="inline">
-                @saas-ui/react
+                not a product.
               </Text>
             </Box>
             <IconButton
@@ -252,14 +254,14 @@ const HighlightsSection = () => {
           </Flex>
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="DevOps Pipeline Setup">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+          We don&apos;t like to{' '}
+          <Em>re-invent the wheel, neither should you.</Em> We help you build
+          and maintain a robust CI/CD pipeline that prioritizes security.
         </Text>
       </HighlightsItem>
-      <HighlightsTestimonialItem
+      {/* <HighlightsTestimonialItem
         name="Renata Alink"
         description="Founder"
         avatar="/static/images/avatar.jpg"
@@ -268,34 +270,27 @@ const HighlightsSection = () => {
         “Saas UI helped us set up a beautiful modern UI in no time. It saved us
         hundreds of hours in development time and allowed us to focus on
         business logic for our specific use-case from the start.”
-      </HighlightsTestimonialItem>
+      </HighlightsTestimonialItem> */}
       <HighlightsItem
         colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
+        title="Phishing Awareness Training"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          Protect your{' '}
+          <Em>team and community from social engineering attacks.</Em> Our
+          comprehensive training programs build awareness and resistance to
+          common attack vectors.
         </Text>
         <Wrap mt="8">
           {[
-            'authentication',
-            'navigation',
-            'crud',
-            'settings',
-            'multi-tenancy',
-            'layouts',
-            'billing',
-            'a11y testing',
-            'server-side rendering',
-            'documentation',
-            'onboarding',
-            'storybooks',
-            'theming',
-            'upselling',
-            'unit testing',
-            'feature flags',
-            'responsiveness',
+            'Social engineering prevention',
+            'Team security awareness',
+            'Custom training modules',
+            'Regular security updates',
+            'DPRK',
+            'Hiring security hygiene',
+            'Hardening',
+            'Operational security',
           ].map((value) => (
             <Tag
               key={value}
@@ -309,109 +304,160 @@ const HighlightsSection = () => {
           ))}
         </Wrap>
       </HighlightsItem>
+      <HighlightsItem title="Operational Security Reviews">
+        <Text color="muted" fontSize="lg">
+          We Audit your <Em>team’s devices, accounts, and security stack </Em>{' '}
+          to ensure they're configured in the most secure way, strengthening
+          your project's operational framework.
+        </Text>
+      </HighlightsItem>
+      <HighlightsItem colSpan={[1, null, 2]} title="Web2 Security Reviews">
+        <Text color="muted" fontSize="lg">
+          Bridge the security gap between{' '}
+          <Em>
+            Web2 and Web3 with our comprehensive infrastructure security
+            assessments.
+          </Em>{' '}
+          Protect your project's traditional tech stack while maintaining
+          blockchain security
+        </Text>
+        <Wrap mt="8">
+          {[
+            'API security testing',
+            'OSWAP TOP 10',
+            'Infrastructure vulnerability scanning',
+            'Cloud Security',
+            'Web application pentesting',
+            'Mobile application pentesting',
+            'Network security optimization',
+            'Senitive secret testing',
+            'Black box testing',
+          ].map((value) => (
+            <Tag
+              key={value}
+              variant="subtle"
+              colorScheme="purple"
+              rounded="full"
+              px="3"
+            >
+              {value}
+            </Tag>
+          ))}
+        </Wrap>
+      </HighlightsItem>
+      <HighlightsItem title="Pre-Audit & Exposure Assessment">
+        <Text color="muted" fontSize="lg">
+          Uncover{' '}
+          <Em>
+            security gaps, threats and internet exposure with detailed reports,{' '}
+          </Em>
+          highlighting vulnerabilities in your team and infrastructure before
+          the audit.
+        </Text>
+      </HighlightsItem>
     </Highlights>
   )
 }
 
-const FeaturesSection = () => {
-  return (
-    <Features
-      id="features"
-      title={
-        <Heading
-          lineHeight="short"
-          fontSize={['2xl', null, '4xl']}
-          textAlign="left"
-          as="p"
-        >
-          Not your standard
-          <Br /> dashboard template.
-        </Heading>
-      }
-      description={
-        <>
-          Saas UI Pro includes everything you need to build modern frontends.
-          <Br />
-          Use it as a template for your next product or foundation for your
-          design system.
-        </>
-      }
-      align="left"
-      columns={[1, 2, 3]}
-      iconSize={4}
-      features={[
-        {
-          title: '#components.',
-          icon: FiBox,
-          description:
-            'All premium components are available on a private NPM registery, no more copy pasting and always up-to-date.',
-          variant: 'inline',
-        },
-        {
-          title: 'Starterkits.',
-          icon: FiLock,
-          description:
-            'Example apps in Next.JS, Electron. Including authentication, billing, example pages, everything you need to get started FAST.',
-          variant: 'inline',
-        },
-        {
-          title: 'Documentation.',
-          icon: FiSearch,
-          description:
-            'Extensively documented, including storybooks, best practices, use-cases and examples.',
-          variant: 'inline',
-        },
-        {
-          title: 'Onboarding.',
-          icon: FiUserPlus,
-          description:
-            'Add user onboarding flows, like tours, hints and inline documentation without breaking a sweat.',
-          variant: 'inline',
-        },
-        {
-          title: 'Feature flags.',
-          icon: FiFlag,
-          description:
-            "Implement feature toggles for your billing plans with easy to use hooks. Connect Flagsmith, or other remote config services once you're ready.",
-          variant: 'inline',
-        },
-        {
-          title: 'Upselling.',
-          icon: FiTrendingUp,
-          description:
-            '#components and hooks for upgrade flows designed to make upgrading inside your app frictionless.',
-          variant: 'inline',
-        },
-        {
-          title: 'Themes.',
-          icon: FiToggleLeft,
-          description:
-            'Includes multiple themes with darkmode support, always have the perfect starting point for your next project.',
-          variant: 'inline',
-        },
-        {
-          title: 'Generators.',
-          icon: FiTerminal,
-          description:
-            'Extend your design system while maintaininig code quality and consistency with built-in generators.',
-          variant: 'inline',
-        },
-        {
-          title: 'Monorepo.',
-          icon: FiCode,
-          description: (
-            <>
-              All code is available as packages in a high-performance{' '}
-              <Link href="https://turborepo.com">Turborepo</Link>, you have full
-              control to modify and adjust it to your workflow.
-            </>
-          ),
-          variant: 'inline',
-        },
-      ]}
-    />
-  )
-}
+// const FeaturesSection = () => {
+//   return (
+//     <Features
+//       id="features"
+//       title={
+//         <Heading
+//           lineHeight="short"
+//           fontSize={['2xl', null, '4xl']}
+//           textAlign="left"
+//           as="p"
+//         >
+//           Not your standard
+//           <Br /> dashboard template.
+//         </Heading>
+//       }
+//       description={
+//         <>
+//           Saas UI Pro includes everything you need to build modern frontends.
+//           <Br />
+//           Use it as a template for your next product or foundation for your
+//           design system.
+//         </>
+//       }
+//       align="left"
+//       columns={[1, 2, 3]}
+//       iconSize={4}
+//       features={[
+//         {
+//           title: '#components.',
+//           icon: FiBox,
+//           description:
+//             'All premium components are available on a private NPM registery, no more copy pasting and always up-to-date.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Starterkits.',
+//           icon: FiLock,
+//           description:
+//             'Example apps in Next.JS, Electron. Including authentication, billing, example pages, everything you need to get started FAST.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Documentation.',
+//           icon: FiSearch,
+//           description:
+//             'Extensively documented, including storybooks, best practices, use-cases and examples.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Onboarding.',
+//           icon: FiUserPlus,
+//           description:
+//             'Add user onboarding flows, like tours, hints and inline documentation without breaking a sweat.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Feature flags.',
+//           icon: FiFlag,
+//           description:
+//             "Implement feature toggles for your billing plans with easy to use hooks. Connect Flagsmith, or other remote config services once you're ready.",
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Upselling.',
+//           icon: FiTrendingUp,
+//           description:
+//             '#components and hooks for upgrade flows designed to make upgrading inside your app frictionless.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Themes.',
+//           icon: FiToggleLeft,
+//           description:
+//             'Includes multiple themes with darkmode support, always have the perfect starting point for your next project.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Generators.',
+//           icon: FiTerminal,
+//           description:
+//             'Extend your design system while maintaininig code quality and consistency with built-in generators.',
+//           variant: 'inline',
+//         },
+//         {
+//           title: 'Monorepo.',
+//           icon: FiCode,
+//           description: (
+//             <>
+//               All code is available as packages in a high-performance{' '}
+//               <Link href="https://turborepo.com">Turborepo</Link>, you have full
+//               control to modify and adjust it to your workflow.
+//             </>
+//           ),
+//           variant: 'inline',
+//         },
+//       ]}
+//     />
+//   )
+// }
 
 const TestimonialsSection = () => {
   const columns = React.useMemo(() => {
@@ -444,15 +490,15 @@ const TestimonialsSection = () => {
   )
 }
 
-const PricingSection = () => {
-  return (
-    <Pricing {...pricing}>
-      <Text p="8" textAlign="center" color="muted">
-        VAT may be applicable depending on your location.
-      </Text>
-    </Pricing>
-  )
-}
+// const PricingSection = () => {
+//   return (
+//     <Pricing {...pricing}>
+//       <Text p="8" textAlign="center" color="muted">
+//         VAT may be applicable depending on your location.
+//       </Text>
+//     </Pricing>
+//   )
+// }
 
 const FaqSection = () => {
   return <Faq {...faq} />
