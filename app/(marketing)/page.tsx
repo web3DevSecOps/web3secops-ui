@@ -1,63 +1,32 @@
-'use client'
+'use client';
 
-import {
-  Box,
-  ButtonGroup,
-  Container,
-  Flex,
-  HStack,
-  Heading,
-  Icon,
-  IconButton,
-  Stack,
-  Tag,
-  Text,
-  VStack,
-  Wrap,
-  useClipboard,
-} from '@chakra-ui/react'
-import { Br, Link } from '@saas-ui/react'
-import type { Metadata, NextPage } from 'next'
-import Image from 'next/image'
-import {
-  FiArrowRight,
-  FiBox,
-  FiCheck,
-  FiCode,
-  FiCopy,
-  FiFlag,
-  FiGrid,
-  FiLock,
-  FiSearch,
-  FiSliders,
-  FiSmile,
-  FiTerminal,
-  FiThumbsUp,
-  FiToggleLeft,
-  FiTrendingUp,
-  FiUserPlus,
-} from 'react-icons/fi'
+import { Box, ButtonGroup, Container, Flex, HStack, Heading, Icon, IconButton, Stack, Tag, Text, VStack, Wrap, useClipboard } from '@chakra-ui/react';
+import { Br, Form, FormLayout, Link, SubmitButton } from '@saas-ui/react';
+import type { Metadata, NextPage } from 'next';
+import Image from 'next/image';
+import { FiArrowRight, FiBox, FiCheck, FiCode, FiCopy, FiFlag, FiGrid, FiLock, FiSearch, FiSliders, FiSmile, FiTerminal, FiThumbsUp, FiToggleLeft, FiTrendingUp, FiUserPlus } from 'react-icons/fi';
 
-import * as React from 'react'
 
-import { ButtonLink } from '#components/button-link/button-link'
-import { Faq } from '#components/faq'
-import { Features } from '#components/features'
-import { BackgroundGradient } from '#components/gradients/background-gradient'
-import { Hero } from '#components/hero'
-import {
-  Highlights,
-  HighlightsItem,
-  HighlightsTestimonialItem,
-} from '#components/highlights'
-import { ChakraLogo, NextjsLogo } from '#components/logos'
-import { FallInPlace } from '#components/motion/fall-in-place'
-import { Pricing } from '#components/pricing/pricing'
-import { Testimonial, Testimonials } from '#components/testimonials'
-import { Em } from '#components/typography'
-import faq from '#data/faq'
+
+import * as React from 'react';
+
+
+
+import { ButtonLink } from '#components/button-link/button-link';
+import { Faq } from '#components/faq';
+import { Features } from '#components/features';
+import { BackgroundGradient } from '#components/gradients/background-gradient';
+import { Hero } from '#components/hero';
+import { Highlights, HighlightsItem, HighlightsTestimonialItem } from '#components/highlights';
+import { ChakraLogo, NextjsLogo } from '#components/logos';
+import { FallInPlace } from '#components/motion/fall-in-place';
+import { Pricing } from '#components/pricing/pricing';
+import { Testimonial, Testimonials } from '#components/testimonials';
+import { Em } from '#components/typography';
+import faq from '#data/faq';
 // import pricing from '#data/pricing'
-import testimonials from '#data/testimonials'
+import testimonials from '#data/testimonials';
+
 
 export const meta: Metadata = {
   title: 'Web3 Security Operation',
@@ -78,6 +47,7 @@ const Home: NextPage = () => {
       {/* <PricingSection /> */}
 
       <FaqSection />
+      <FormSection />
     </Box>
   )
 }
@@ -359,105 +329,7 @@ const HighlightsSection = () => {
   )
 }
 
-// const FeaturesSection = () => {
-//   return (
-//     <Features
-//       id="features"
-//       title={
-//         <Heading
-//           lineHeight="short"
-//           fontSize={['2xl', null, '4xl']}
-//           textAlign="left"
-//           as="p"
-//         >
-//           Not your standard
-//           <Br /> dashboard template.
-//         </Heading>
-//       }
-//       description={
-//         <>
-//           Saas UI Pro includes everything you need to build modern frontends.
-//           <Br />
-//           Use it as a template for your next product or foundation for your
-//           design system.
-//         </>
-//       }
-//       align="left"
-//       columns={[1, 2, 3]}
-//       iconSize={4}
-//       features={[
-//         {
-//           title: '#components.',
-//           icon: FiBox,
-//           description:
-//             'All premium components are available on a private NPM registery, no more copy pasting and always up-to-date.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Starterkits.',
-//           icon: FiLock,
-//           description:
-//             'Example apps in Next.JS, Electron. Including authentication, billing, example pages, everything you need to get started FAST.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Documentation.',
-//           icon: FiSearch,
-//           description:
-//             'Extensively documented, including storybooks, best practices, use-cases and examples.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Onboarding.',
-//           icon: FiUserPlus,
-//           description:
-//             'Add user onboarding flows, like tours, hints and inline documentation without breaking a sweat.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Feature flags.',
-//           icon: FiFlag,
-//           description:
-//             "Implement feature toggles for your billing plans with easy to use hooks. Connect Flagsmith, or other remote config services once you're ready.",
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Upselling.',
-//           icon: FiTrendingUp,
-//           description:
-//             '#components and hooks for upgrade flows designed to make upgrading inside your app frictionless.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Themes.',
-//           icon: FiToggleLeft,
-//           description:
-//             'Includes multiple themes with darkmode support, always have the perfect starting point for your next project.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Generators.',
-//           icon: FiTerminal,
-//           description:
-//             'Extend your design system while maintaininig code quality and consistency with built-in generators.',
-//           variant: 'inline',
-//         },
-//         {
-//           title: 'Monorepo.',
-//           icon: FiCode,
-//           description: (
-//             <>
-//               All code is available as packages in a high-performance{' '}
-//               <Link href="https://turborepo.com">Turborepo</Link>, you have full
-//               control to modify and adjust it to your workflow.
-//             </>
-//           ),
-//           variant: 'inline',
-//         },
-//       ]}
-//     />
-//   )
-// }
+
 
 const TestimonialsSection = () => {
   const columns = React.useMemo(() => {
@@ -490,18 +362,73 @@ const TestimonialsSection = () => {
   )
 }
 
-// const PricingSection = () => {
-//   return (
-//     <Pricing {...pricing}>
-//       <Text p="8" textAlign="center" color="muted">
-//         VAT may be applicable depending on your location.
-//       </Text>
-//     </Pricing>
-//   )
-// }
+
 
 const FaqSection = () => {
   return <Faq {...faq} />
 }
 
+const FormSection = () => {
+  const onSubmit = async (params) => {
+    try {
+      console.log(params)
+      // Simulate async submission
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
+      // Optional: Add toast or notification for successful submission
+    } catch (error) {
+      console.error('Submission error:', error)
+    }
+  }
+
+  return (
+    <Container maxW="container.xl" py={16}>
+      <VStack spacing={8} align="stretch">
+        <Heading size="xl" textAlign="center">
+          Contact Us
+        </Heading>
+        <Form
+          defaultValues={{
+            name: '',
+            description: '',
+          }}
+          onSubmit={onSubmit}
+        >
+          {({ Field }) => (
+            <FormLayout maxWidth="600px" margin="0 auto" spacing={6}>
+              <Field
+                name="email"
+                label="Email"
+                type="email"
+                // help="Enter your email address"
+                rules={{
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: 'Invalid email address'
+                  }
+                }}
+              />
+
+              <Field
+                name="description"
+                type="textarea"
+                label="Your Queries"
+                placeholder="Enter your queries here"
+                // help="Provide a brief overview of your project"
+              />
+
+              <SubmitButton colorScheme="primary" size="lg" width="full">
+                Submit
+              </SubmitButton>
+            </FormLayout>
+          )}
+        </Form>
+      </VStack>
+    </Container>
+  )
+}
+
+
 export default Home
+
