@@ -1,6 +1,5 @@
 import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
-import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FiCheck } from 'react-icons/fi'
 
@@ -11,31 +10,22 @@ const siteConfig = {
   seo: {
     title: 'Web3 Security Operation',
     description: 'Securing Every Layer of Web3, Beyond Just Audits',
-  } as NextSeoProps,
+  },
   termsUrl: '#',
   privacyUrl: '#',
   header: {
     links: [
       {
-        id: 'features',
-        label: 'Features',
+        id: 'home',
+        label: 'Home',
       },
       {
-        id: 'pricing',
-        label: 'Pricing',
+        id: 'service',
+        label: 'Service',
       },
       {
         id: 'faq',
         label: 'FAQ',
-      },
-      {
-        label: 'Login',
-        href: '/login',
-      },
-      {
-        label: 'Sign Up',
-        href: '/signup',
-        variant: 'primary',
       },
     ],
   },

@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
@@ -12,16 +11,23 @@ const nextConfig = {
               plugins: [
                 {
                   name: 'removeViewBox',
-                  active: false,
+                  active: false, // Keeps the viewBox for accessibility and scaling purposes
                 },
               ],
             },
           },
         },
       ],
-    })
-    return config
-  },
-}
+    });
 
-export default nextConfig
+    // Add cache settings to improve performance when dealing with large assets like SVGs
+    config.cache = {
+      type: 'filesystem',
+      
+    };
+
+    return config;
+  },
+};
+
+export default nextConfig;

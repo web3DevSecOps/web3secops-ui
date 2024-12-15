@@ -9,6 +9,8 @@ import { useScroll } from 'framer-motion'
 
 import * as React from 'react'
 
+import siteConfig from '#data/config'
+
 import { Logo } from './logo'
 import Navigation from './navigation'
 
@@ -45,18 +47,10 @@ export const Header = (props: HeaderProps) => {
     >
       <Container maxW="container.2xl" px="8" py="4">
         <Flex width="full" align="center" justify="space-between">
-          <Logo
-            onClick={(e) => {
-              if (window.location.pathname === '/') {
-                e.preventDefault()
+          <Flex>
+            <Box as={siteConfig.logo} height="6px" />
+          </Flex>
 
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth',
-                })
-              }
-            }}
-          />
           <Navigation />
         </Flex>
       </Container>
