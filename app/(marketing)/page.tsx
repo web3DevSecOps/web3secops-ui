@@ -241,8 +241,7 @@ const HighlightsSection = () => {
               Web2 and Web3 with our comprehensive infrastructure security
               assessments.
             </Em>{' '}
-            Protect your project's traditional tech stack while maintaining
-            blockchain security
+            Protect your project while maintaining blockchain security
           </Text>
           <Wrap mt="8">
             {[
