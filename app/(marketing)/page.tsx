@@ -180,7 +180,7 @@ const HighlightsSection = () => {
         </HighlightsItem>
         <HighlightsItem title="DevOps Pipeline Setup">
           <Text color="muted" fontSize="lg">
-            We don&apos;t like to re-invent the wheel, neither should you.
+            We do not like to re-invent the wheel, neither should you.
             and maintain a robust CI/CD pipeline that prioritizes security.
           </Text>
         </HighlightsItem>
@@ -229,9 +229,9 @@ const HighlightsSection = () => {
         </HighlightsItem>
         <HighlightsItem title="Operational Security Reviews">
           <Text color="muted" fontSize="lg">
-            We Audit your <Em>team’s devices, accounts, and security stack </Em>{' '}
-            to ensure they&apos;re configured in the most secure way
-            your project's operational framework.
+            We Audit your <Em>team devices, accounts, and security stack </Em>{' '}
+            to ensure they are configured in the most secure way
+            your project operational framework.
           </Text>
         </HighlightsItem>
         <HighlightsItem colSpan={[1, null, 2]} title="Web2 Security Reviews">
