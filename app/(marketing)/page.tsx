@@ -38,10 +38,10 @@ import { Em } from '#components/typography'
 import faq from '#data/faq'
 import testimonials from '#data/testimonials'
 
-export const meta: Metadata = {
-  title: 'Web3 Security Operation',
-  description: 'Securing Every Layer of Web3, Beyond Just Audits',
-}
+// export const meta: Metadata = {
+//   title: 'Web3 Security Operation',
+//   description: 'Securing Every Layer of Web3, Beyond Just Audits',
+// }
 
 const Home: NextPage = () => {
   return (
