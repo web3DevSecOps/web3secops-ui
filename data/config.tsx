@@ -10,6 +10,7 @@ const siteConfig = {
   seo: {
     title: 'Web3 Security Operation',
     description: 'Securing Every Layer of Web3, Beyond Just Audits',
+    opengraph: '',
   },
   termsUrl: '#',
   privacyUrl: '#',
@@ -18,14 +19,17 @@ const siteConfig = {
       {
         id: 'home',
         label: 'Home',
+        href: '',
       },
       {
         id: 'service',
         label: 'Service',
+        href: '',
       },
       {
         id: 'faq',
         label: 'FAQ',
+        href: '',
       },
     ],
   },
