@@ -36,7 +36,7 @@ const siteConfig = {
   footer: {
     copyright: (
       <>
-        Built by <Link href="https://x.com/Codeninja04">Hemendra Sharma</Link>
+        Built by <Link href="https://x.com/__Raiders">Raiders</Link>
       </>
     ),
     links: [
